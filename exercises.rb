@@ -255,3 +255,79 @@ end
 p abrev_flint
 
 #10
+# Again, shorten each of these names to just 3 characters -- but this time do it all on one line:
+
+flintstones = %w(Fred Barney Wilma Betty BamBam Pebbles)
+
+flintstones.map {|name| p name.slice(0,2)}
+
+#Easy Quiz 3
+
+#1
+# Show an easier way to write this array:
+#
+# flintstones = ["Fred", "Barney", "Wilma", "Betty", "BamBam", "Pebbles"]
+
+flintstones = %w(Fred Barney Wilma Betty BamBam Pebbles)
+p flintstones
+
+#2
+flintstones = %w(Fred Barney Wilma Betty BamBam Pebbles)
+
+flintstones << "Dino"
+
+p flintstones
+
+#3
+flintstones.push("Dino").push("Hoppy")
+
+#4
+# Shorten this sentence:
+
+advice = "Few things in life are as important as house training your pet dinosaur."
+
+# ...remove everything starting from "house".
+
+advice = advice.split(" ")
+advice.slice!(8, 5)
+advice = advice.join(" ")
+p advice
+
+#5
+# Write a one-liner to count the number of lower-case 't' characters in the following string:
+
+statement = "The Flintstones Rock!"
+statement = statement.split("")
+tCount = 0
+
+statement.each do |letter|
+  if letter == "t"
+    tCount += 1
+  end
+end
+
+p tCount
+
+#6
+title.center(40)
+
+#Intermediate Questions ===============================================
+
+#1
+# Let's do some "ASCII Art" (a stone-age form of nerd artwork from back in the days before computers had video screens).
+#
+# For this exercise, write a one-line program that creates the following output 10 times, with the subsequent line indented 1 space to the right:
+#
+# The Flintstones Rock!
+#  The Flintstones Rock!
+#   The Flintstones Rock!
+
+string = "The flintstones Rock!"
+space = " "
+
+10.times do |sentence|
+  p space + string
+  space += " "
+end
+
+#2
