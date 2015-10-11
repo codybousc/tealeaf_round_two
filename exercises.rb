@@ -1,5 +1,4 @@
-#not sure why the age variable needs to be a global var. is that the same as var = 3 in javascript?
-# i thought i remembered reading that global vars should be avoided
+
 
 #2
 def agePlus()
@@ -311,7 +310,7 @@ p tCount
 #6
 title.center(40)
 
-#Intermediate Questions ===============================================
+#Intermediate Questions Quiz 1 ===============================================
 
 #1
 # Let's do some "ASCII Art" (a stone-age form of nerd artwork from back in the days before computers had video screens).
@@ -331,3 +330,72 @@ space = " "
 end
 
 #2
+# will come back to this one!
+
+
+#3
+puts "the value of 40 + 2 is " + (40 + 2).to_s
+
+#5
+def factors(number)
+  dividend = number
+  divisors = []
+  while dividend > 0 do
+    divisors << number / dividend if number % dividend == 0
+    dividend -= 1
+  end
+  divisors
+end
+
+p factors(0)
+
+#7
+#limit = 15 //so this is a local, not a global, variable in ruby
+
+def fib(first_num, second_num, limit)
+  while second_num < limit
+    sum = first_num + second_num
+    first_num = second_num
+    second_num = sum
+  end
+  sum
+end
+
+result = fib(0, 1, 15)
+puts "result is #{result}"
+
+#8
+str = "I'm a monkey man"
+str = str.split(" ")
+p str
+counter = 0
+str.each do |space|
+  space.capitalize!
+  end
+
+p str.join(" ")
+
+#9
+
+munsters = {
+  "Herman" => { "age" => 32, "gender" => "male" },
+  "Lily" => { "age" => 30, "gender" => "female" },
+  "Grandpa" => { "age" => 402, "gender" => "male" },
+  "Eddie" => { "age" => 10, "gender" => "male" },
+  "Marilyn" => { "age" => 23, "gender" => "female"}
+}
+
+
+munsters.each do |key, value|
+  if value["age"] < 20
+    value["age_group"] = "kid"
+  elsif value["age"] < 100
+    value["age_group"] = "adult"
+  elsif value["age"] > 100
+    value["age_group"] = "senior"
+  end
+end
+
+#Intermediate Questions Quiz 2 ===============================================
+
+#1
