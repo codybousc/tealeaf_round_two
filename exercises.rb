@@ -399,3 +399,56 @@ end
 #Intermediate Questions Quiz 2 ===============================================
 
 #1
+#Find age of all males
+
+munsters = {
+  "Herman" => { "age" => 32, "gender" => "male" },
+  "Lily" => { "age" => 30, "gender" => "female" },
+  "Grandpa" => { "age" => 402, "gender" => "male" },
+  "Eddie" => { "age" => 10, "gender" => "male" }
+}
+
+total_age = 0
+
+munsters.each do |key, value|
+    if value["gender"] == "male"
+      total_age += value["age"]
+    end
+end
+
+p total_age
+
+#2
+# Given this previously seen family hash, print out the name, age and gender of each family member:
+
+munsters = {
+  "Herman" => { "age" => 32, "gender" => "male" },
+  "Lily" => { "age" => 30, "gender" => "female" },
+  "Grandpa" => { "age" => 402, "gender" => "male" },
+  "Eddie" => { "age" => 10, "gender" => "male" },
+  "Marilyn" => { "age" => 23, "gender" => "female"}
+}
+
+munsters.each do |key, value|
+  p "#{key} is a #{value["age"]} year old #{value["gender"]}"
+end
+
+#4
+
+sentence = "Humpty Dumpty sat on a wall."
+
+p sentence = sentence.split(" ").reverse().join(" ").gsub(/[^a-z0-9\s]/i, '')
+
+#5
+
+34 #it's printing answer minus 8 and not the result of new_answer
+
+#6
+#The hash was permanently altered. Ruby's parameters point the actual object ID and not to copies
+
+#7
+
+#8
+"no"
+
+#Intermediate Questions Quiz 3 ===============================================
